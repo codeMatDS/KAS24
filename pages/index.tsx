@@ -33,7 +33,7 @@ const IndexPage = () => {
             {/*  */}
             <div className="flex p-6 flex-row items-center lg:items-start gap-5 lg:gap-[38px] lg:flex-col rounded-2xl bg-blue lg:profile">
               <img
-                src="/images/image-jeremy.png"
+                src="./images/image-jeremy.png"
                 alt="Jeremy Robson"
                 width={84}
                 height={84}
