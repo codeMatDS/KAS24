@@ -95,7 +95,7 @@ const Card = ({
         className="toggle-button transition-all z-20 p-1 hover:filter-white"
         ref={buttonRef}
       >
-        <img src="/images/icon-ellipsis.svg" alt="" width={21} height={5} />
+        <img src="./images/icon-ellipsis.svg" alt="" width={21} height={5} />
       </button>
       <Tooltip
         index={index}
