@@ -28,7 +28,7 @@ const IndexPage = () => {
     <Layout title="Home | Next.js + TypeScript Example">
       <main className="grid justify-items-center min-h-screen mt-[253px]  text-white">
         <h1 className="sr-only">{data.title}</h1>
-        <div className="grid w-full max-w-[1110px] lg:grid-cols-[0.9273fr_3fr] gap-[30px]">
+        <div className="grid  w-full max-w-[1110px] lg:grid-cols-[0.9273fr_3fr] gap-[30px]" style=" HEIGHT: fit-content; ">>
           <div className="rounded-2xl bg-dark-blue">
             {/*  */}
             <div className="flex p-6 flex-row items-center lg:items-start gap-5 lg:gap-[38px] lg:flex-col rounded-2xl bg-blue lg:profile">
