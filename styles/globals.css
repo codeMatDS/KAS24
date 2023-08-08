@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    body {
+        font-size: 18px;
+        font-family: "Rubik", sans-serif;
+    }
+
+    div[hidden] {
+        display: none;
+    }
+
+    :is(a, button, input, textarea, select, details, summary):focus-visible {
+        outline: red theme('colors.soft-blue') 0.188rem;
+        outline-offset: 0.188rem;
+    }
+}
+
+
+@layer components {
+
+    /* START: Default styles */
+    button[aria-expanded="true"]+.tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .profile {
+        @apply pb-[77.5px] px-[29px] pt-[34px]
+    }
+
+    .name-padding {
+        /* mt-[37px] */
+        @apply ml-[4px]
+    }
+
+    .p-card {
+        /* px-[30px] pb-8 pt-[29px] */
+        padding: 24px 26px 22px 30px
+    }
+
+    .p-card-hours {
+        /* mt-[29px] */
+        margin-block: 22px 6px;
+    }
+
+    .clamp-title {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .filter-white {
+        filter: brightness(0) invert(1);
+    }
+
+    /* END: Default styles */
+
+    /* START: Background images [pixel-perfect] */
+    .icon-bg {
+        background-repeat: no-repeat;
+    }
+
+    .bg-work {
+        background-position: 91% -6%;
+    }
+
+    .bg-play {
+        background-position: 88% -3%;
+    }
+
+    .bg-study {
+        background-position: 90.5% -4%;
+    }
+
+    .bg-exercise {
+        background-position: 90% top;
+    }
+
+    .bg-social {
+        background-position: 93% -10%;
+    }
+
+    .bg-self-care {
+        background-position: 92% -6%;
+    }
+
+    /* END: Background images [pixel-perfect] */
+
+    /* START: Styles for the button of each tab */
+    .tab-button[aria-selected="true"] {
+        @apply text-white;
+    }
+
+    .tab-button-padding {
+        padding-left: 33px;
+        padding-block: 11px;
+        text-align: start;
+    }
+
+    @media screen(lg) {
+        #tab-button-0 {
+            margin-top: 13px;
+            padding-block: 13px 9px;
+        }
+
+        #tab-button-2 {
+            margin-bottom: 22px;
+        }
+    }
+
+    /* END: Styles for the button of each tab */
+
+    /* START: Link of the card */
+    .card-link {
+        outline: none;
+    }
+
+    .card-link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        @apply rounded-2xl;
+    }
+
+    .card-link:focus::after {
+        outline: 2px solid red;
+        outline-offset: 2px;
+    }
+
+    /* END: Link of the card */
+}
